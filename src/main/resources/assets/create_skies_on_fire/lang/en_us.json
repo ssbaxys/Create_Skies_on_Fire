@@ -1,0 +1,7 @@
+{
+  "block.create_skies_on_fire.rocket_base": "Rocket Base",
+  "block.create_skies_on_fire.rocket_thruster": "Rocket Thruster",
+  "block.create_skies_on_fire.rocket_hull": "Rocket Hull",
+  "block.create_skies_on_fire.rocket_nose_cone": "Rocket Nose Cone",
+  "creativetab.create_skies_on_fire": "Create: Skies on Fire"
+}
