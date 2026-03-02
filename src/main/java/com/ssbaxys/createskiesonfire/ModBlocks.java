@@ -13,29 +13,29 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
-            CreateSkiesOnFire.MOD_ID);
+        public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
+                        CreateSkiesOnFire.MOD_ID);
 
-    public static final RegistryObject<Block> ROCKET_BASE = registerBlock("rocket_base",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final RegistryObject<Block> ROCKET_THRUSTER = registerBlock("rocket_thruster",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final RegistryObject<Block> ROCKET_HULL = registerBlock("rocket_hull",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final RegistryObject<Block> ROCKET_NOSE_CONE = registerBlock("rocket_nose_cone",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+        public static final RegistryObject<Block> ROCKET_BASE = registerBlock("rocket_base",
+                        () -> new RocketBaseBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+        public static final RegistryObject<Block> ROCKET_THRUSTER = registerBlock("rocket_thruster",
+                        () -> new RocketThrusterBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+        public static final RegistryObject<Block> ROCKET_HULL = registerBlock("rocket_hull",
+                        () -> new RocketHullBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+        public static final RegistryObject<Block> ROCKET_NOSE_CONE = registerBlock("rocket_nose_cone",
+                        () -> new RocketNoseConeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
+        private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+                RegistryObject<T> toReturn = BLOCKS.register(name, block);
+                registerBlockItem(name, toReturn);
+                return toReturn;
+        }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
+        private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+                return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        }
 
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
+        public static void register(IEventBus eventBus) {
+                BLOCKS.register(eventBus);
+        }
 }

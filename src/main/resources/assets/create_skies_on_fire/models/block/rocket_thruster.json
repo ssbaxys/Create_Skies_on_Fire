@@ -1,1 +1,213 @@
-{ "parent": "minecraft:block/cube_all", "textures": { "all": "create_skies_on_fire:block/rocket_thruster" } }
+{
+  "parent": "block/block",
+  "textures": {
+    "all": "create_skies_on_fire:block/rocket_thruster",
+    "particle": "create_skies_on_fire:block/rocket_thruster"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        4,
+        12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#all"
+        },
+        "north": {
+          "uv": [
+            4,
+            12,
+            12,
+            16
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            4,
+            12,
+            12,
+            16
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            4,
+            12,
+            12,
+            16
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            4,
+            12,
+            12,
+            16
+          ],
+          "texture": "#all"
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        4,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#all"
+        },
+        "north": {
+          "uv": [
+            3,
+            6,
+            13,
+            12
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            3,
+            6,
+            13,
+            12
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            3,
+            6,
+            13,
+            12
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            3,
+            6,
+            13,
+            12
+          ],
+          "texture": "#all"
+        }
+      }
+    },
+    {
+      "from": [
+        2,
+        10,
+        2
+      ],
+      "to": [
+        14,
+        16,
+        14
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#all"
+        },
+        "north": {
+          "uv": [
+            2,
+            0,
+            14,
+            6
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            2,
+            0,
+            14,
+            6
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            2,
+            0,
+            14,
+            6
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            2,
+            0,
+            14,
+            6
+          ],
+          "texture": "#all"
+        }
+      }
+    }
+  ]
+}

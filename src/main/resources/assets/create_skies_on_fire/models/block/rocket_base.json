@@ -1,1 +1,77 @@
-{ "parent": "minecraft:block/cube_all", "textures": { "all": "create_skies_on_fire:block/rocket_base" } }
+{
+  "parent": "block/block",
+  "textures": {
+    "all": "create_skies_on_fire:block/rocket_base",
+    "particle": "create_skies_on_fire:block/rocket_base"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        16,
+        15
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#all"
+        },
+        "north": {
+          "uv": [
+            1,
+            0,
+            15,
+            16
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            1,
+            0,
+            15,
+            16
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            1,
+            0,
+            15,
+            16
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            1,
+            0,
+            15,
+            16
+          ],
+          "texture": "#all"
+        }
+      }
+    }
+  ]
+}
